@@ -3,11 +3,12 @@
 //https://raw.githubusercontent.com/kshipeng/JavaScript/master/金鱼.js
 
 
-//封面信息（key、方法名不可更改）
+//封面信息（key、方法名不可更改， "source":"JS"不可缺少）
 function coverInfo() {
     var name = "金鱼";
     var imageURL = "http://cdn.63a0.com/Uploads/Advertisement/20200720_012455_15951794950467_3974.jpg";
-    return { "name": name, "logo": imageURL, "source":"JS" };
+    var online = "50";
+    return { "name": name, "logo": imageURL, "source":"JS", "quantity":online };
 }
 
 //房间列表（key、方法名不可更改）

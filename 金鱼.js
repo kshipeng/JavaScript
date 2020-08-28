@@ -1,9 +1,10 @@
 
+//https://raw.githubusercontent.com/kshipeng/JavaScript/master/金鱼.js
 
 //封面信息
 function coverInfo() {
     var name = "金鱼";
-    var imageURL = "http://cdn.63a0.com/Uploads/Advertisement/20200717_224410_15949970500426_8965.jpg";
+    var imageURL = "http://cdn.63a0.com/Uploads/Advertisement/20200720_012455_15951794950467_3974.jpg";
     return { "name": name, "logo": imageURL, "source":"JS" };
 }
 

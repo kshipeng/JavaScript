@@ -10,7 +10,7 @@ function coverInfo() {
     return { "name": name, "logo": imageURL, "source":"JS" };
 }
 
-//房间列表
+//房间列表（key不可更改）
 function videoListInfo() {
     var url = "https://cdn.63a0.com/index.php/Api/LiveApi/getPlatformlist";
     var method = "POST";
@@ -19,7 +19,7 @@ function videoListInfo() {
     return { "url": url, "method": method, "param": param, "header": header };
 }
 
-//处理网络数据，统一格式
+//处理网络数据，统一格式（key不可更改）
 function handleData(dic) {
     //dic 为字典，需经过处理，最终如下,key的名称必须如下所示
     // {

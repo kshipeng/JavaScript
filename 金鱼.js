@@ -1,15 +1,13 @@
 
 
-
 //https://raw.githubusercontent.com/kshipeng/JavaScript/master/金鱼.js
 
 
 //封面信息（key不可更改）
 function coverInfo() {
-    var name = "jinYu";
+    var name = "金鱼";
     var imageURL = "http://cdn.63a0.com/Uploads/Advertisement/20200720_012455_15951794950467_3974.jpg";
-    var fileName = "jinYu";
-    return { "name": name, "logo": imageURL, "source":"JS", "fileName":fileName };
+    return { "name": name, "logo": imageURL, "source":"JS" };
 }
 
 //房间列表

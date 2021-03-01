@@ -29,7 +29,7 @@ function randomRange(min, max) { // min最小值，max最大值
 }
 
 !(async() => {
-    for (let i = 0; i < articles.length; i++) {
+    for (let i = randomRange(0, 7); i < articles.length; i++) {
 		encodearticles = encodeURIComponent(encodeURIComponent(articles[i]));
         nowTime = new Date().getTime();
         wxck = md5(nowTime);

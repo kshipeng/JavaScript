@@ -29,25 +29,26 @@ function randomRange(min, max) { // min最小值，max最大值
 }
 
 !(async() => {
-    for (let i = randomRange(0, 7); i < articles.length; i++) {
-		encodearticles = encodeURIComponent(encodeURIComponent(articles[i]));
+    //for (let i = randomRange(0, 7); i < articles.length; i++) {
+	let i = randomRange(0, 8);
+	encodearticles = encodeURIComponent(encodeURIComponent(articles[i]));
         nowTime = new Date().getTime();
         wxck = md5(nowTime);
         $.log("📚中青分享第"+i+"次📚"+wxck);
 		
         await storage();
-        await $.wait(3000);
+        await $.wait(randomRange(2, 4)*1000);
 
         await visit();
-        await $.wait(3000);
+        await $.wait(randomRange(2, 4)*1000);
 
         await openpage();
-        await $.wait(3000);
+        await $.wait(randomRange(2, 4)*1000);
 
         await callback();
-        await $.wait(3000);
+        await $.wait(randomRange(2, 4)*1000);
 
-    }
+    //}
 })()
 .catch((e) => $.logErr(e))
 .finally(() => $.done())

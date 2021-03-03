@@ -197,9 +197,9 @@ function time(inputTime) {
 };
 //日期格式化时间戳
 function timecs() {
-    if ($.isNode()) {
+    //if ($.isNode()) {
         var date = new Date(newtime).getTime() - 8 * 60 * 60 * 1000
-    } else var date = new Date(newtime).getTime()
+    //} else var date = new Date(newtime).getTime()
 
     return date;
 };

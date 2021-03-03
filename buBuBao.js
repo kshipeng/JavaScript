@@ -180,10 +180,10 @@ function ts(inputTime) {
 };
 //今天0点时间戳时间戳
 function daytime(inputTime) {
-    //if ($.isNode()) {
+    if ($.isNode()) {
         DAYTIME =
             new Date(new Date().toLocaleDateString()).getTime() - 8 * 60 * 60 * 1000;
-    //} else DAYTIME = new Date(new Date().toLocaleDateString()).getTime();
+    } else DAYTIME = new Date(new Date().toLocaleDateString()).getTime();
     return DAYTIME;
 };
 //时间戳格式化日期
@@ -201,9 +201,9 @@ function time(inputTime) {
 };
 //日期格式化时间戳
 function timecs() {
-    if ($.isNode()) {
+    //if ($.isNode()) {
         var date = new Date(newtime).getTime() - 8 * 60 * 60 * 1000
-    } else var date = new Date(newtime).getTime()
+    //} else var date = new Date(newtime).getTime()
 
     return date;
 };

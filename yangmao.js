@@ -24,9 +24,12 @@ result = [];
 
 async function all() {
 
-    let ymzck = require('./ymzck.json');
+    let ymzck = {
+        "UserIDs": "10041",
+        "watchadck1": "sign=3a13528c79d334f3442ed39f5ffc6e20&channelID=2&taskid=1&type=1&uid=10041&ver=104&&{\"Accept\":\"*/*\",\"Accept-Encoding\":\"gzip, deflate\",\"Connection\":\"keep-alive\",\"Content-Type\":\"application/x-www-form-urlencoded\",\"Host\":\"ymz.iphonezhuan.com\",\"User-Agent\":\"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.04 CFNetwork/978.0.7 Darwin/18.7.0\",\"Content-Length\":\"83\",\"Accept-Language\":\"zh-cn\"}",
+        "watchvediock1": "sign=0a541effccc83e153863de1ea45b6f07&channelID=2&taskid=2&type=2&uid=10041&ver=104&&{\"Accept\":\"*/*\",\"Accept-Encoding\":\"gzip, deflate\",\"Connection\":\"keep-alive\",\"Content-Type\":\"application/x-www-form-urlencoded\",\"Host\":\"ymz.iphonezhuan.com\",\"User-Agent\":\"%E7%BE%8A%E6%AF%9B%E8%8B%B1%E6%B1%89%E8%AF%8D%E5%85%B8/1.04 CFNetwork/978.0.7 Darwin/18.7.0\",\"Content-Length\":\"83\",\"Accept-Language\":\"zh-cn\"}"
+    };
     UserIDsArr = ymzck.UserIDs.split('&');
-
 
     for (let i = 1; i <= UserIDsArr.length; i++) {
         result[i] = 200;
@@ -70,7 +73,7 @@ async function all() {
     console.log('视频观看结束，任务执行完毕\n');
 
     for (let i = 1; i <= UserIDsArr.length; i++) {
-        moneybody = `channelID=2&uid=${UserIDsArr[i - 1] - 10000000}&ver=104`,
+        moneybody = `channelID=2&uid=${UserIDsArr[i - 1]}&ver=104`,
             await moneyinfo(i);
     }
 

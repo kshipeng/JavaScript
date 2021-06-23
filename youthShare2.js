@@ -34,7 +34,7 @@ function randomRange(min, max) { // min最小值，max最大值
 	encodearticles = encodeURIComponent(encodeURIComponent(articles[i]));
         nowTime = new Date().getTime();
         wxck = md5(nowTime);
-        $.log("📚中青分享第"+i+"次📚"+wxck);
+        $.log("📚中青分享📚");
 		
         await storage();
         await $.wait(randomRange(2, 4)*1000);

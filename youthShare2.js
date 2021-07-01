@@ -34,7 +34,7 @@ function randomRange(min, max) { // min最小值，max最大值
 	encodearticles = encodeURIComponent(encodeURIComponent(articles[i]));
         nowTime = new Date().getTime();
         wxck = md5(nowTime);
-        $.log("📚中青分享📚");
+        $.log("📚中青分享📚\n"+encodearticles);
 		
         await storage();
         await $.wait(randomRange(2, 4)*1000);
@@ -65,7 +65,7 @@ function storage() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log('storage成功:'+data);
+                $.log('storage成功');
             } catch (e) {
                 $.log('storage失败:'+e)
             }
@@ -87,7 +87,7 @@ function visit() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log('visit成功:'+data);
+                $.log('visit成功');
             } catch (e) {
                 $.log('visit失败:'+e)
             }
@@ -108,7 +108,7 @@ function openpage() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log('openpage成功:'+data);
+                $.log('openpage成功');
             } catch (e) {
                 $.log('openpage失败:'+e)
             }
@@ -128,7 +128,7 @@ function callback() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log('callback成功:'+data);
+                $.log('callback成功');
             } catch (e) {
                 $.log('callback失败:'+e)
             }

@@ -65,9 +65,9 @@ function storage() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log(data);
+                $.log('storage成功:'+data);
             } catch (e) {
-                $.log(e)
+                $.log('storage失败:'+e)
             }
             resolve();
         })
@@ -87,9 +87,9 @@ function visit() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log(data);
+                $.log('visit成功:'+data);
             } catch (e) {
-                $.log(e)
+                $.log('visit失败:'+e)
             }
             resolve();
         })
@@ -108,9 +108,9 @@ function openpage() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log(data);
+                $.log('openpage成功:'+data);
             } catch (e) {
-                $.log(e)
+                $.log('openpage失败:'+e)
             }
             resolve();
         })
@@ -128,9 +128,9 @@ function callback() {
 
         $.get(request, function (error, response, data) {
             try {
-                $.log(data);
+                $.log('callback成功:'+data);
             } catch (e) {
-                $.log(e)
+                $.log('callback失败:'+e)
             }
             resolve();
         })
